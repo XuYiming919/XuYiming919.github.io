@@ -1,84 +1,80 @@
-<!DOCTYPE html>
-<html lang="zh">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>正品验证 - AGAR MAKER</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            text-align: center;
-            background-color: #f9f9f9;
-        }
-        .header {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-        .anniversary {
-            font-size: 18px;
-            margin-bottom: 30px;
-        }
-        .verification {
-            font-size: 28px;
-            font-weight: bold;
-            margin: 30px 0;
-            color: #333;
-        }
-        .message {
-            font-size: 16px;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-        .social {
-            font-size: 18px;
-            margin: 25px 0 15px;
-            font-weight: bold;
-        }
-        .brand-name {
-            font-size: 20px;
-            font-weight: bold;
-            margin: 15px 0;
-        }
-        .description {
-            font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 30px;
-            color: #555;
-        }
-        .patent {
-            font-size: 12px;
-            font-style: italic;
-            margin-top: 30px;
-            color: #666;
-        }
-    </style>
-</head>
-<body>
-    <div class="header">AGAR MAKER</div>
-    <div class="anniversary">4th Anniversary Celebration</div>
-    
-    <div class="verification">正品验证</div>
-    
-    <div class="message">
-        感谢您对莯香品牌的支持<br>
-        欢迎加入莯香「全生态」<br>
-        关注我们的小红书<br>
-        接收全部新品信息
+import { Card, CardContent } from "@/components/ui/card";
+import { CheckIcon, SearchIcon } from "lucide-react";
+import React from "react";
+
+export default function Agarmaker(): JSX.Element {
+  return (
+    <div className="bg-white flex flex-row justify-center w-full">
+      <div className="bg-white overflow-hidden w-[1080px] h-[1920px] relative flex flex-col items-center">
+        {/* Logo and Brand Name */}
+        <div className="mt-[86px] flex flex-col items-center">
+          <img
+            className="w-[352px] h-[270px] object-cover"
+            alt="AGAR MAKER logo"
+            src=""
+          />
+        </div>
+
+        {/* Verification Section */}
+        <div className="mt-[199px] flex items-center">
+          <div className="[font-family:'Mplus_1p-Regular',Helvetica] text-[#c89f65] text-[110px] tracking-[-2.20px] leading-[154.0px] font-normal">
+            正品验证
+          </div>
+
+          <div className="relative ml-[30px]">
+            <div className="w-[92px] h-[92px] rounded-[46px] border-[6px] border-solid border-[#c89f65] flex items-center justify-center">
+              <CheckIcon className="w-[57px] h-[46px] text-[#c89f65]" />
+            </div>
+          </div>
+        </div>
+
+        {/* Content Section */}
+        <div className="mt-[65px] w-full px-[68px] flex">
+          {/* Text Content */}
+          <div className="w-[601px]">
+            <div className="[font-family:'Post_No_Bills_Colombo_Light-Regular',Helvetica] text-black text-3xl tracking-[-0.60px] leading-[100px] font-normal">
+              感谢您对莯香品牌的支持 <br />
+              欢迎加入莯香「全生态」 <br />
+              关注我们的小红书 接收全部新品信息
+            </div>
+          </div>
+
+          {/* Product Image */}
+          <div className="flex-1">
+            <img
+              className="w-[527px] h-[819px] object-cover"
+              alt="Product bracelet"
+              src=""
+            />
+          </div>
+        </div>
+
+        {/* Search Bar */}
+        <div className="mt-[100px] flex items-center justify-center">
+          <Card className="border border-gray-300 rounded-md flex items-center w-[400px]">
+            <CardContent className="flex items-center p-2">
+              <div className="bg-black text-white px-2 py-1 mr-2 text-sm">
+                小红书
+              </div>
+              <div className="flex-1 text-sm">AGAR MAKER莯香</div>
+              <SearchIcon className="h-4 w-4" />
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Footer */}
+        <div className="mt-auto mb-4 flex flex-col items-center">
+          <img
+            className="w-[501px] h-[83px] object-cover mb-4"
+            alt="AGAR MAKER logo"
+            src=""
+          />
+          <div className="[font-family:'Nixie_One-Regular',Helvetica] font-normal text-black text-xl text-center tracking-[-0.40px] leading-[40.2px] max-w-[1013px]">
+            AGAR MAKER&apos;s original design has been granted protection under
+            a design patent.
+          </div>
+        </div>
+      </div>
     </div>
-    
-    <div class="social">小红书</div>
-    <div class="brand-name">AGAR MAKER莯香</div>
-    
-    <div class="description">
-        以天然沉香为本，专注于原创手工制作时尚的香薰类产品及饰品
-    </div>
-    
-    <div class="patent">
-        AGAR MAKER's original design has been granted protection under a design patent.
-    </div>
-</body>
-</html>
+  );
+}
